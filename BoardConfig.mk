@@ -1,5 +1,4 @@
-# Copyright (C) 2013-2016, The CyanogenMod Project
-# Copyright (C) 2017, The LineageOS Project
+# Copyright (C) 2013 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,28 +20,23 @@
 # definition file).
 #
 
-# Inherit from common serrano
--include device/samsung/serrano-common/BoardConfigCommon.mk
-
-# Inherit from proprietary vendor
--include vendor/samsung/serranoltexx/BoardConfigVendor.mk
+# Inherit from common lt02ltexx
+-include device/samsung/lt02ltexx-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := serranolte,serranoltebmc,serranoltektt,serranoltexx
+TARGET_OTA_ASSERT_DEVICE := lt02lte,lt02ltespr,lt02ltetmo
 
 # Kernel
-TARGET_KERNEL_VARIANT_CONFIG := msm8930_serrano_eur_lte_defconfig
-
-# NFC
-BOARD_HAVE_NFC := true
-
-# BLN
-BOARD_HAVE_GENERIC_BLN := true
+TARGET_KERNEL_VARIANT_CONFIG := msm8930_lt02_spr_defconfig
 
 # Charger
 BOARD_NO_CHARGER_LED := true
 
+# Enable dex pre-optimization with PIC
+#WITH_DEXPREOPT := true
+#WITH_DEXPREOPT_PIC := true
+
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_serranolte
-TARGET_RECOVERY_DEVICE_MODULES := libinit_serranolte
+TARGET_INIT_VENDOR_LIB := libinit_lt02lte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_lt02lte

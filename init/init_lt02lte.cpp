@@ -49,18 +49,18 @@ void vendor_load_properties()
 
     property_get("ro.bootloader", bootloader, NULL);
 
-    if (strstr(bootloader, "I257M")) {
-        /* serranoltebmc */
-        property_set("ro.build.fingerprint", "samsung/serranoltebmc/serranoltebmc:4.4.2/KOT49H/I257MVLUBNE6:user/release-keys");
-        property_set("ro.build.description", "serranoltebmc-user 4.4.2 KOT49H I257MVLUBNE6 release-keys");
-        property_set("ro.product.model", "SGH-I257M");
-        property_set("ro.product.device", "serranoltebmc");
-    } else if (strstr(bootloader, "I9195")) {
-        /* serranoltexx */
-        property_set("ro.build.fingerprint", "samsung/serranoltexx/serranolte:4.4.2/KOT49H/I9195XXUCNE6:user/release-keys");
-        property_set("ro.build.description", "serranoltexx-user 4.4.2 KOT49H I9195XXUCNE6 release-keys");
-        property_set("ro.product.model", "GT-I9195");
-        property_set("ro.product.device", "serranoltexx");
+    if (strstr(bootloader, "T217S")) {
+        /* lt02ltespr */
+        property_set("ro.build.fingerprint", "samsung/lt02ltespr/lt02ltespr:4.4.2/KOT49H/T217SVPUBOH1:user/release-keys");
+        property_set("ro.build.description", "lt02ltespr-user 4.4.2 KOT49H T217SVPUBOH1 release-keys");
+        property_set("ro.product.model", "SM-T217S");
+        property_set("ro.product.device", "lt02ltespr");
+    } else if (strstr(bootloader, "T217T")) {
+        /* lt02ltetmo */
+        property_set("ro.build.fingerprint", "samsung/lt02ltetmo/lt02ltetmo:4.4.2/KOT49H/T217TVPUBOH1:user/release-keys");
+        property_set("ro.build.description", "lt02ltetmo-user 4.4.2 KOT49H T217TVPUBOH1 release-keys");
+        property_set("ro.product.model", "SM-T217T");
+        property_set("ro.product.device", "lt02ltetmo");
     } else if (strstr(bootloader, "E370K")) {
         /* serranoltektt */
         property_set("ro.build.fingerprint", "samsung/serranoltektt/serranoltektt:4.4.4/KTU84P/E370KKTU2BNK5:user/release-keys");

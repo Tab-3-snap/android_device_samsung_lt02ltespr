@@ -1,5 +1,4 @@
-# Copyright (C) 2013-2016, The CyanogenMod Project
-# Copyright (C) 2017, The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,12 +16,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from serranoltexx device
-$(call inherit-product, device/samsung/serranoltexx/device.mk)
+$(call inherit-product, device/samsung/lt02ltespr/device.mk)
 
-# Inherit some common LineageOS stuff.
+# Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_serranoltexx
-PRODUCT_DEVICE := serranoltexx
+PRODUCT_NAME := cm_lt02ltespr
+PRODUCT_DEVICE := lt02ltespr
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
