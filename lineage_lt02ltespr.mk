@@ -20,15 +20,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/lt02ltespr/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_NAME := lineage_lt02ltespr
 PRODUCT_DEVICE := lt02ltespr
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
-PRODUCT_MODEL := SM-T217S
-PRODUCT_GMS_CLIENTID_BASE := android-samsung
+#PRODUCT_MODEL := SM-T217S
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="samsung/lt02ltespr/lt02ltespr:4.4.2/KOT49H/T217SVPUBOH1:user/release-keys" \
+    TARGET_DEVICE=lt02ltespr \
     PRIVATE_BUILD_DESC="lt02ltespr-user 4.4.2 KOT49H T217SVPUBOH1 release-keys"
+
+BUILD_FINGERPRINT := "samsung/lt02ltespr/lt02ltespr:4.4.2/KOT49H/T217SVPUBOH1:user/release-keys"
