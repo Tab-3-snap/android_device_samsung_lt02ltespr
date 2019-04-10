@@ -1,1 +1,1 @@
-add_lunch_combo lineage_lt02ltespr-userdebug
+add_lunch_combo aosp_lt02ltespr-userdebug

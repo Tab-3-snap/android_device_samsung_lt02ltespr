@@ -19,10 +19,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from serranoltexx device
 $(call inherit-product, device/samsung/lt02ltespr/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+#(PE-CAF)
+$(call inherit-product, vendor/aosp/config/common.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm
+TARGET_MINIMAL_APPS := true
+CUSTOM_BUILD_TYPE := OFFICIAL
 
-PRODUCT_NAME := lineage_lt02ltespr
+# Inherit from our common CAF device tree.
+include device/qcom/common/common.mk
+
+PRODUCT_NAME := aosp_lt02ltespr
 PRODUCT_DEVICE := lt02ltespr
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
